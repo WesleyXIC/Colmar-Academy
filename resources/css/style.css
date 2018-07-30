@@ -1,0 +1,128 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  font-style: Helvetica, sans-serif;
+  max-width: 1024px;
+  margin: auto;
+}
+/* Header content */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 1.7rem;
+  width: auto;
+}
+
+header strong {
+  font-weight: bold;
+}
+
+header span {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+/* Banner Content */
+
+.banner {
+  background-color: rgb(112, 128, 144)
+}
+
+.bannerContent{
+  display: flex;
+  align-items: center;
+}
+
+.flexbox-content {
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.bannerContent img {
+  max-width: 92%;
+  max-height: auto;
+  margin: 1.7rem 1.3rem;
+}
+
+.flexbox {
+  max-width: 60%;
+}
+
+.flexboxBanner {
+  max-width: 40%;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Information container */
+
+.column {
+  display: flex;
+  border: solid 1px;
+}
+
+.columnLarge {
+  max-width: 60%;
+  margin: 0 1.3rem;
+}
+
+.columnLarge .rep {
+  margin: 1.7rem 0;
+}
+
+.columnLarge p {
+  margin-top: 1.3rem;
+}
+
+.columnLarge img {
+  max-width: 92%;
+  height: auto;
+  margin: 1.7rem 0;
+}
+
+.columnMedium {
+  max-width: 40%;
+}
+
+.mediumCell {
+  display: flex;
+  align-items: center;
+  margin: 0 .9rem 0;
+}
+
+.mediumCell img {
+  max-width: 125px;
+  margin: .9rem .9rem;
+}

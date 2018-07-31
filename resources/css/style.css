@@ -47,13 +47,12 @@ ul {
 }
 
 .flexbox-content {
-  margin: auto;
-  flex-wrap: wrap;
+  margin: 0 4rem 0 0;
 }
 
-.bannerContent img {
+.flexbox-img img {
   max-width: 92%;
-  max-height: auto;
+  height: auto;
   margin: 1.7rem 1.3rem;
 }
 
@@ -63,6 +62,7 @@ ul {
 
 .flexboxBanner {
   max-width: 40%;
+  padding-right: 6rem;
 }
 
 .start {
@@ -86,16 +86,26 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 /* Information container */
 
 .column {
-  display: flex;
   border: solid 1px;
 }
 
+.column-content {
+  display: flex;
+}
+
 .columnLarge {
-  max-width: 60%;
-  margin: 0 1.3rem;
+  max-width: 56%;
+  margin: 0 0 0 1.3rem;
+  padding-right: 0;
+  border: solid 1px;
 }
 
 .columnLarge .rep {
@@ -107,22 +117,85 @@ h2 {
 }
 
 .columnLarge img {
-  max-width: 92%;
+  max-width: 100%;
   height: auto;
-  margin: 1.7rem 0;
+  margin-top: 1.3rem;
+
 }
 
 .columnMedium {
-  max-width: 40%;
-}
-
-.mediumCell {
+  max-width: 44%;
   display: flex;
-  align-items: center;
-  margin: 0 .9rem 0;
+  margin: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: solid 1px;
 }
 
-.mediumCell img {
+
+.medium-flex {
+  display: flex;
+  border: solid 1px;
+  align-items: center;
+}
+
+.columnMedium img {
   max-width: 125px;
   margin: .9rem .9rem;
+}
+
+/*learning content */
+
+.learning {
+  border: solid 1px;
+  background: rgb(240, 248, 255);
+}
+
+.startLearning {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1.7rem;
+}
+
+
+.flex-learning {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content {
+  max-width: 275px;
+  height: auto;
+  margin: 1.7rem 0.9rem;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+/* thesis content */
+
+.thesis {
+  border: solid 1px;
+}
+
+.thesisHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-thesis {
+  display: flex;
+}
+
+video {
+  height: auto;
+  max-width: 100%;
 }

@@ -33,10 +33,28 @@ header span {
   flex-grow: 1;
 }
 
+header ul {
+  padding-right: 1.3rem;
+}
+
+header li {
+  margin-right: 0.9rem;
+}
+
+header li .signIn {
+
+}
+
 ul {
   display: flex;
   align-items: center;
   text-align: right;
+}
+
+@media only screen and (max-width: 600px){
+  header ul {
+    display: none;
+  }
 }
 
 /* Banner Content */
@@ -80,6 +98,10 @@ ul {
   padding: 1rem;
 }
 
+.start:hover {
+  background-color: grey;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -93,6 +115,19 @@ h2 {
 h3 {
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px){
+  .bannerContent {
+    flex-direction: column;
+    margin: 0;
+  }
+  .flexbox-img img {
+    display: none;
+  }
+  .flexbox {
+    background-image: url("./c:/Projects/colmarAcademy/resources/images/banner.jpg");
+  }
 }
 
 /* Information container */
@@ -164,6 +199,16 @@ h3 {
   margin: .4rem 0;
 }
 
+@media only screen and (max-width: 600px){
+  .columnLarge {
+    display: none;
+  }
+  .columnMedium {
+    max-width: 100%;
+    flex-wrap: nowrap;
+  }
+}
+
 /*learning content */
 
 .learning {
@@ -229,4 +274,8 @@ footer {
 .credit {
   flex-grow: 1;
   margin: .9rem 0 1.7rem 1.3rem;
+}
+
+footer li {
+  margin-right: 0.9rem;
 }

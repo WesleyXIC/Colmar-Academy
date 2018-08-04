@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-style: Helvetica, sans-serif;
+  font-style: Times;
   max-width: 1024px;
   margin: auto;
   border-bottom: solid 1px grey;
@@ -51,9 +51,35 @@ ul {
   text-align: right;
 }
 
+.mobileHeader {
+  display: none;
+}
+
 @media only screen and (max-width: 600px){
-  header ul {
+  header {
     display: none;
+  }
+  .mobile-header {
+
+  }
+  .mobileHeader {
+    width: 100%;
+    z-index: 1;
+    background: white;
+    opacity: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .mobile-flex {
+    flex: auto;
+  }
+  .mobile-flex img {
+    height: 2rem;
+    padding: 0.8rem 0.9rem;
   }
 }
 
@@ -61,6 +87,10 @@ ul {
 
 .banner {
   background-color: lightgrey;
+}
+
+.mobileBanner {
+  display: none;
 }
 
 .bannerContent{
@@ -79,6 +109,7 @@ ul {
 }
 
 .flexbox {
+
   max-width: 60%;
 }
 
@@ -105,11 +136,13 @@ ul {
 h1 {
   font-size: 2rem;
   font-weight: bold;
+  font-style: helvetica;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: bold;
+  font-style: helvetica;
 }
 
 h3 {
@@ -118,16 +151,32 @@ h3 {
 }
 
 @media only screen and (max-width: 600px){
-  .bannerContent {
-    flex-direction: column;
-    margin: 0;
+  .mobileBanner {
+    display: inherit;
+    background: lightgrey;
+    padding-bottom: 1.7rem;
   }
-  .flexbox-img img {
+  .mobileBanner img {
+    max-width: 100%;
+    margin-top: 60px;
+  }
+  .mobileBanner h2 {
+    margin-bottom: 1.7rem;
+  }
+  .mobileBanner p {
+    margin-bottom: 1.3rem;
+    font-weight: bold;
+  }
+  .mobileContent {
+    margin: 1.7rem 0.9rem;
+  }
+  .mobileContent .start {
+    padding-bottom 1.7rem;
+  }
+  .banner {
     display: none;
   }
-  .flexbox {
-    background-image: url("./c:/Projects/colmarAcademy/resources/images/banner.jpg");
-  }
+
 }
 
 /* Information container */
@@ -199,13 +248,34 @@ h3 {
   margin: .4rem 0;
 }
 
+.mobile-campus {
+  display: none;
+}
+
+/* Mobile content */
+
 @media only screen and (max-width: 600px){
-  .columnLarge {
+  .column {
     display: none;
   }
-  .columnMedium {
+  .mobile-campus {
+    display: inherit;
+  }
+  .mobile-flex-information {
+    margin: 0.9rem;
+  }
+  .mobile-flex-information img {
     max-width: 100%;
-    flex-wrap: nowrap;
+  }
+  .mobile-flex-information a {
+    color: blue;
+    text-decoration: none;
+  }
+  .mobile-flexInfo {
+    margin: 1.3rem 0.9rem;
+  }
+  .mobile-flexInfo p {
+    margin: 0.5rem 0;
   }
 }
 
@@ -235,11 +305,50 @@ h3 {
   height: auto;
   margin: 1.7rem 0.9rem;
   background: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-info {
+  margin: 0.9rem;
+}
+
+.content-info p {
+  margin-top: 8px;
+}
 
 .content img {
   width: 100%;
   height: auto;
+}
+
+.mobileLearning {
+  display: none;
+}
+
+/* Mobile learning content */
+
+@media only screen and (max-width: 600px){
+  .learning {
+    display: none;
+  }
+  .mobileLearning {
+    display: inherit;
+    border-top: solid 1px lightgrey;
+    margin: 1.7rem 0.9rem;
+  }
+  .mobileLearning h2 {
+    margin: 1.7rem 0.9rem;
+  }
+  .mobile-learning-content {
+    background: lightgrey;
+    margin-bottom: 8px;
+    padding: 1.3rem 0.9rem 1.3rem 0.9rem;
+  }
+  .mobile-learning-content:hover {
+    background: grey;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+  }
 }
 
 /* thesis content */
@@ -264,6 +373,29 @@ video {
   max-width: 100%;
 }
 
+.mobileThesis {
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  video {
+    height: auto;
+    max-width: 100%;
+  }
+  .mobileThesis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px lightgrey;
+  }
+  .mobileThesis h1 {
+    margin: 1.7rem 0 0.9rem 0;
+  }
+  .mobile-video {
+    margin-bottom: 1.3rem;
+  }
+}
 /* footer content */
 
 footer {
@@ -278,4 +410,10 @@ footer {
 
 footer li {
   margin-right: 0.9rem;
+}
+
+@media only screen and (max-width: 600px){
+  footer ul {
+    display: none;
+  }
 }
